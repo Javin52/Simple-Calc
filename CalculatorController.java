@@ -138,9 +138,11 @@ public class CalculatorController implements Initializable {
     
     @FXML 
     private void decimal(ActionEvent event){
-        screenTwo = calcwindow.variable('.');
-        screen.setText(screenTwo);
+        if (!screenTwo.contains(".")) {
+            screenTwo = calcwindow.variable('.');
+            screen.setText(screenTwo);
         }
+    }
     
     @FXML
     private void addition(ActionEvent event){
